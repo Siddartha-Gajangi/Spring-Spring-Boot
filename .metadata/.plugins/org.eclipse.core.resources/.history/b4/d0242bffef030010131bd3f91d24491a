@@ -1,0 +1,17 @@
+package com.nit.main;
+
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import com.ioc.sbeans.WishMsgGenerator;
+
+public class DependencyInjectionTest {
+public static void main(String[] args) {
+	
+	FileSystemXmlApplicationContext ctx= new FileSystemXmlApplicationContext("src/com/ioc/cfgs/applicationContext.xml");
+	Object obj=ctx.getBean("wmg");
+	WishMsgGenerator generator=(WishMsgGenerator)obj;
+	String msg=generator.showWishMessage("Sid");
+	System.out.println("result: "+msg);
+	ctx.close();
+}
+}

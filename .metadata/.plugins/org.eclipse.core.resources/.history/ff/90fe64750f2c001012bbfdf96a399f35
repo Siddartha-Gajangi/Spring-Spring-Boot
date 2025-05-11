@@ -1,0 +1,9 @@
+package com.sid.Entity;
+
+@Entity
+@Table(name="ACTOR_INFO")
+@Data
+
+public class Actor {
+
+}

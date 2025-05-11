@@ -1,0 +1,38 @@
+package com.sid;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.sid.Entity.Doctor;
+
+import com.sid.Service.IDoctorService;
+
+
+@SpringBootApplication
+public class BootIoc03CruDoperationsJpaApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext ctx=	SpringApplication.run(BootIoc03CruDoperationsJpaApplication.class, args);
+
+		
+		IDoctorService service=ctx.getBean("doctorService",IDoctorService.class);
+		
+		try
+		{
+			Doctor doctor=new Doctor();
+			doctor.setDocName("supraja");
+			doctor.setSpecialization("cardio");
+			doctor.setIncome(80000.0);
+			String resultMsg=service.registerDoctor(doctor);
+			System.out.println(resultMsg);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		((ConfigurableApplicationContext) ctx).close();
+	}
+}
+

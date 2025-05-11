@@ -1,0 +1,15 @@
+<!-- applicationContext.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Configure java.time.LocalTime class as a Spring bean -->
+    <bean id="lt" class="java.time.LocalTime" factory-method="now"/>
+
+    <!-- Configure WishMessageGenerator as a Spring bean -->
+    <bean id="wmg" class="com.nt.beans.WishMessageGenerator">
+        <!-- Assign the LocalTime bean to the 'time' property -->
+        <property name="time" ref="lt"/>
+    </bean>
+</beans>

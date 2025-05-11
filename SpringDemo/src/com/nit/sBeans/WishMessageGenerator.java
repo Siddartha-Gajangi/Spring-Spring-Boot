@@ -1,0 +1,26 @@
+package com.nit.sBeans;
+
+import java.time.LocalDate;
+
+public class WishMessageGenerator {
+	//has-a relation
+		private LocalDate date;
+
+		public void setDate(LocalDate date) {
+			System.out.println("WishMessageGenerator.setDate()");
+			this.date = date;
+		}
+		public String showMessageGenerator() {
+			System.out.println("WishMessageGenerator.showMessageGenerator()");
+			int month = date.getMonthValue();
+			if(month>=3&&month<=7) {
+				return "Summer Season";
+			}
+			else if(month>=8 && month<=10 ) {
+				return "Rainy Season";
+			}
+			else {
+				return "Winter Season";
+			}
+		}
+}

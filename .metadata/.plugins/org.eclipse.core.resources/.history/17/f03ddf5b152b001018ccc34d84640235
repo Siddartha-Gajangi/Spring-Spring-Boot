@@ -1,0 +1,8 @@
+package com.sid.Repositary;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface IDoctorRepo extends CrudRepository<Doctor,Integer>
+{
+
+}

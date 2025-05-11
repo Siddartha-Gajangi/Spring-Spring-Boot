@@ -1,0 +1,24 @@
+package com.sid.Service;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sid.Entity.Doctor;
+import com.sid.Repositary.*;
+@Service("doctorService")
+public class DoctorMgmtServiceImpl implements IDoctorRepo
+{
+	@Autowired
+	private IDoctorRepo doctorRepo;
+
+	@Override
+	public String registerDoctor(Doctor doctor) 
+	{
+		System.out.println("doc id(beforesave)::"+doctor.getDocid());
+		Doctor doc=doctorRepo.save(doctor);
+		
+		return "Doctor obj is saved with id value:"+doc.getDocid();
+	}
+
+}

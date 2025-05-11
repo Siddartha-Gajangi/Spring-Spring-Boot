@@ -1,0 +1,5 @@
+package com.sid.Entity;
+
+public @interface Entity {
+
+}

@@ -1,0 +1,26 @@
+package com.ioc.sbeans;
+
+import java.time.LocalTime;
+public class WishMsgGenerator {
+
+	private LocalTime time;
+
+	public void setTime(LocalTime time) {
+		System.out.println("WishMsgGenerator.setTime()");
+		this.time = time;
+	}
+	
+	public String showWishMessage(String user) {
+		System.out.println("WishMsgGenerator.showWishMessage()");
+		int hour=time.getHour();
+		if(hour<12) 
+			return "Good Morning "+user;
+		else if(hour<16)
+			return "Good Afternoon "+user;
+		else if(hour<18)
+			return "Good Evening "+user;
+		else
+			return"Good night "+user;
+		
+	}
+}

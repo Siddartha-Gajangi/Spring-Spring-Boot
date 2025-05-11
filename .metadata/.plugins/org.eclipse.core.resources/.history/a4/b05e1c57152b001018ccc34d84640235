@@ -1,0 +1,5 @@
+package com.sid.Repositary;
+
+public interface IDoctorRepo {
+
+}

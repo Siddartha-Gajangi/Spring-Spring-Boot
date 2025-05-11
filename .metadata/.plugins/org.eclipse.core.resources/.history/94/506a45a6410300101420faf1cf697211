@@ -1,0 +1,5 @@
+package com.ioc.sbeans;
+
+public class WishMsgGenerator {
+
+}

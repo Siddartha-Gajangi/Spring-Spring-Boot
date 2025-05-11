@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BootIOC02-DependencyInjection-Mini-Project&apos; to &apos;BootIOC02-LayeredApplication-RealTimeDP-Mini-Project&apos;" description="Rename resource &apos;BootIOC02-DependencyInjection-Mini-Project&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/BootIOC02-DependencyInjection-Mini-Project" name="BootIOC02-LayeredApplication-RealTimeDP-Mini-Project" stamp="1744946122403" updateReferences="true"/>
+</session>
